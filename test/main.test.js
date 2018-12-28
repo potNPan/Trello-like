@@ -51,11 +51,11 @@ test('customElements exists', () => {
     expect(window.customElements).toBeDefined();
 });
 
-let columnsEle = document.createElement('trl-columns');
-document.body.appendChild(columnsEle);
-loadColumns('http://localhost:3000');
-
 test('loadColumns loads columns and cards in 2 seconds', done => {
+    let columnsEle = document.createElement('trl-columns');
+    document.body.appendChild(columnsEle);
+    loadColumns('http://localhost:3000');
+
     setTimeout(() => {
         expect(columns()).toBeInstanceOf(Array);
         expect(cards()).toBeInstanceOf(Array);
@@ -136,7 +136,7 @@ test('delColumn', () => {
         });
 });
 
-test('delCard', () => {
+test('delCard returns 404 for card in a deleted column', () => {
     expect.assertions(1);
     return delCard(testCardId)
         .catch(err => {
