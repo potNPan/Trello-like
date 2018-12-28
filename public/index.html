@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Trello-like</title>
+        <link rel="stylesheet" href="main.css">
+        <script type="module" >
+        import { loadColumns } from './js/main.js';
+        loadColumns('http://localhost:3000');
+        </script>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <header>
+            <trl-search></trl-search>
+        </header>
+        <main>
+            <trl-columns></trl-columns>
+        </main>
+        <footer>
+            Trello-like by Quentin Pan
+        </footer>
+    </body>
+</html>

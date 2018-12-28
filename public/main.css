@@ -1,0 +1,35 @@
+/* colours based on http://paletton.com/#uid=13-0u0kn2tAdxI9iOy7sdqJu4kS */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+}
+button, textarea, input {
+    font-family: inherit;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    align-items: center;
+    background-color: #369;
+    height: 2em;
+    color: #ccc;
+    padding: 0 1em;
+}
+main {
+    width: 100%;
+    flex: 1;
+    background-color: #7aa0ca;
+    color: #333;
+}
+footer {
+    display: flex;
+    align-items: center;
+    height: 2em;
+    background-color: #0e3e6e;
+    color: #ccc;
+}
